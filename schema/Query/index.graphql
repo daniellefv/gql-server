@@ -1,6 +1,6 @@
 type Query {
   books: [Book]!
-  book(bookId: ID!): Book
+  book(id: ID!): Book
   annotations(bookId: ID!): [Annotation]!
   roles: [Role]!
   role(id: ID!): Role

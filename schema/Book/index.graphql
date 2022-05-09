@@ -3,8 +3,6 @@ type Annotation {
   note: String!
   createdAt: String
   bookId: String!
-  bookName: String!
-  author: String!
 }
 
 type Book {

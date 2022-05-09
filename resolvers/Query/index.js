@@ -1,23 +1,25 @@
-const { users } = require("../../data/db");
+const { users, roles, books, annotations } = require("../../data/db");
 
 module.exports = {
   books() {
-    return [];
+    return books;
   },
   annotations(_, { bookId }) {
-    return [];
+    const selected = annotations.filter(
+      (annotation) => annotation.bookId === bookId
+    );
+    return selected || [];
   },
-  book(_, { bookId }) {
-    return null;
+  book(_, { id }) {
+    const selected = books.find((book) => book.id === id);
+    return selected || null;
   },
   roles() {
-    return [
-      { id: "123", type: "Admin" },
-      { id: "12423", type: "Regular" },
-    ];
+    return roles;
   },
   role(_, { id }) {
-    return { id: "123", type: "Admin" };
+    const selected = roles.find((role) => role.id === id);
+    return selected || null;
   },
   users() {
     return users;
