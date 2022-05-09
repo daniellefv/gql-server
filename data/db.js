@@ -1,18 +1,23 @@
+let firstId = 1;
+const generateNextId = () => {
+  return `${firstId++}`;
+};
+
 const books = [
   {
-    id: "1",
+    id: generateNextId(),
     title: "Atomic habits",
     author: "James Clear",
     createdAt: "2022-04-14T11:20:43.718Z",
   },
   {
-    id: "2",
+    id: generateNextId(),
     title: "Sprint",
     author: "Jake Knapp",
     createdAt: "2022-04-11T11:20:43.718Z",
   },
   {
-    id: "3",
+    id: generateNextId(),
     title: "The Servant",
     author: "James C. Hunter",
     createdAt: "2022-05-11T11:20:43.718Z",
@@ -75,4 +80,4 @@ const users = [
   },
 ];
 
-module.exports = { users, roles, annotations, books };
+module.exports = { users, roles, annotations, books, generateNextId };
