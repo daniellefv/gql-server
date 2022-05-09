@@ -1,0 +1,22 @@
+type Annotation {
+  id: ID!
+  note: String!
+  createdAt: String
+  bookId: String!
+  bookName: String!
+  author: String!
+}
+
+type Book {
+  id: ID!
+  title: String!
+  author: String!
+  createdAt: String
+  annotations: [Annotation]!
+}
+
+input BookInput {
+  id: ID
+  title: String
+  author: String
+}

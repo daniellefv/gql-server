@@ -1,0 +1,17 @@
+type User {
+  id: ID!
+  email: String!
+  name: String!
+  books: [Book]!
+  role: Role
+}
+
+enum RoleType {
+  Admin
+  Regular
+}
+
+type Role {
+  id: ID!
+  type: RoleType
+}

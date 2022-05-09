@@ -1,0 +1,9 @@
+type Query {
+  books: [Book]!
+  book(bookId: ID!): Book
+  annotations(bookId: ID!): [Annotation]!
+  roles: [Role]!
+  role(id: ID!): Role
+  users: [User]!
+  user(id: ID!): User
+}
