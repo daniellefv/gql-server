@@ -1,0 +1,6 @@
+type Annotation {
+  id: ID!
+  note: String!
+  createdAt: String
+  bookId: String!
+}
