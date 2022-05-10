@@ -1,4 +1,5 @@
 type Mutation {
   createBook(title: String!, author: String!): Book
-  updateBook(id: String!, title: String, author: String): Book
+  updateBook(filter: BookFilter, input: BookInput): Book
+  deleteBook(filter: BookFilter): Boolean
 }

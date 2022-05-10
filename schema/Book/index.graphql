@@ -18,3 +18,8 @@ input BookInput {
   title: String
   author: String
 }
+
+input BookFilter {
+  id: ID
+  title: String
+}

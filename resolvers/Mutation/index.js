@@ -14,17 +14,27 @@ module.exports = {
     books.push(newBook);
     return newBook;
   },
-  updateBook(_, args) {
-    const index = books.findIndex((book) => book.id === args.id);
+  updateBook(_, { input, filter }) {
+    const index = books.findIndex((book) =>
+      filter.id ? book.id === filter.id : book.title === filter.title
+    );
     if (index < 0) {
       throw new Error("Book doesn't exist");
     }
     const updatedBook = {
       ...books[index],
-      ...args,
+      ...input,
     };
 
     books.splice(index, 1, updatedBook);
     return updatedBook;
+  },
+  deleteBook(_, { filter }) {
+    const index = books.findIndex((book) => book.id === filter.id);
+    if (index < 0) {
+      throw new Error("Book doesn't exist");
+    }
+    books.splice(index, 1);
+    return true;
   },
 };
