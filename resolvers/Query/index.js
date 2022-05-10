@@ -1,9 +1,9 @@
-const Book = require("./Book");
-const Annotation = require("./Annotation");
-const User = require("./User");
+const book = require("./book");
+const annotation = require("./annotation");
+const user = require("./user");
 
 module.exports = {
-  ...Book,
-  ...Annotation,
-  ...User,
+  ...book,
+  ...annotation,
+  ...user,
 };

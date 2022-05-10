@@ -4,3 +4,7 @@ type Annotation {
   createdAt: String
   bookId: String!
 }
+
+input AnnotationInput {
+  note: String
+}

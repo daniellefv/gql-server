@@ -1,0 +1,5 @@
+type Mutation {
+  createAnnotation(bookId: String!, input: AnnotationInput): Annotation
+  updateAnnotation(id: String!, input: AnnotationInput): Annotation
+  deleteAnnotation(id: String!): Boolean
+}

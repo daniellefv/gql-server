@@ -1,5 +1,7 @@
-const Book = require("./Book");
+const book = require("./book");
+const annotation = require("./annotation");
 
 module.exports = {
-  ...Book,
+  ...book,
+  ...annotation,
 };
