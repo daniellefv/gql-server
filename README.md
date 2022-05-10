@@ -1,5 +1,7 @@
 # gql-server
 
+## GraphQL based server application
+
 This is project was created to put in practise some basic knowledge of how to structure a Graphql server.
 It was based on the follow-book (Frontend) project and needs - possible integration in the future.
 
